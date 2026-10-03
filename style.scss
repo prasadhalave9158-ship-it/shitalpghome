@@ -1,0 +1,65 @@
+// Shital PG Booking — source styles
+// This file intentionally uses CSS-compatible SCSS so it can be compiled by Sass.
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#fff7fb,#f2f5ff);color:#20243a}
+header{background:linear-gradient(135deg,#fff,#fff5fa);padding:18px 15px 14px;text-align:center;border-bottom:4px solid #d41470}
+.logo{width:min(430px,92vw);max-height:190px;object-fit:contain}
+.top-title{font-size:15px;font-weight:800;color:#7b174e;margin:3px 0 0;letter-spacing:.5px}
+.container{max-width:980px;margin:20px auto;padding:0 15px}
+.section-title{text-align:center;font-size:24px;color:#74195d;margin:8px 0 16px}
+.amenities{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-bottom:20px}
+.amenity{background:#fff;border:1px solid #ead7e4;border-radius:30px;padding:9px 13px;font-size:13px;font-weight:700;box-shadow:0 3px 10px #0000000d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:17px}
+.card{background:#fff;border-radius:22px;padding:19px;box-shadow:0 8px 25px #00000012;border:1px solid #f0dce8}
+.badge{display:inline-block;background:#f9e1ef;color:#8b1659;padding:7px 11px;border-radius:20px;font-weight:bold;font-size:13px}
+.room{font-size:25px;font-weight:800;margin:10px 0;color:#222a54}
+.row{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #eee}
+.available{color:#148a3b;font-weight:800}
+.facilities{margin:12px 0;line-height:1.8;font-size:14px}
+button{width:100%;border:0;border-radius:13px;padding:13px;background:linear-gradient(135deg,#8b1d68,#d41470);color:white;font-size:16px;font-weight:bold;cursor:pointer}
+button:hover{opacity:.92}
+.admin{margin-top:28px;background:#171624;color:white;border-radius:20px;padding:19px}
+.admin h2{margin-top:0}
+.admin input{width:100%;padding:12px;border-radius:10px;border:0;margin:6px 0 10px}
+.small{font-size:12px;color:#777}
+.hidden{display:none}
+#adminPanel{margin-top:15px}
+.admin-card{background:#292637;padding:12px;border-radius:12px;margin:8px 0}
+.note{background:#fff0f7;border-left:4px solid #d41470;border-radius:12px;padding:12px;margin:15px 0;font-size:13px}
+.whatsapp{text-align:center;margin-top:15px;font-weight:bold;color:#128c45}
+
+.booking-overlay{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:16px;z-index:99}
+.booking-overlay.show{display:flex}
+.booking-form{width:min(460px,100%);background:white;border-radius:24px;padding:22px;box-shadow:0 20px 60px #0005;animation:pop .2s ease}
+@keyframes pop{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
+.booking-form h2{margin:0 0 5px;color:#74195d}
+.booking-sub{font-size:13px;color:#666;margin-bottom:16px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field{margin-bottom:12px}
+.field.full{grid-column:1/-1}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:#444}
+.field input,.field select{width:100%;padding:12px;border:1px solid #ddd;border-radius:11px;font-size:15px;background:#fafafa}
+.summary{background:#fff2f8;border-radius:14px;padding:12px;margin:12px 0;font-size:14px;line-height:1.7}
+.form-actions{display:flex;gap:9px}
+.form-actions button{flex:1}
+.cancel{background:#666}
+.bed-list{display:flex;flex-wrap:wrap;gap:8px}
+.bed-btn{width:auto;padding:9px 13px;background:#f4e5ef;color:#74195d;border:1px solid #e3c3d5}
+.bed-btn.selected{
+  background:linear-gradient(135deg,#16a34a,#0f7a36);
+  color:#fff;
+  border:2px solid #0b5f2a;
+  box-shadow:0 0 0 4px #bbf7d0,0 7px 18px #16a34a55;
+  transform:translateY(-2px);
+}
+.bed-btn.selected::after{content:" ✓ Selected";font-weight:800}
+
+.status-pill{display:inline-block;padding:5px 9px;border-radius:20px;font-size:12px;font-weight:800;margin-left:5px}
+.status-available{background:#dcf8e6;color:#137a3d}
+.status-occupied{background:#ffe1e1;color:#b3261e}
+.status-na{background:#e7e7ea;color:#555}
+.bed-status-list{display:grid;gap:8px;margin-top:10px}
+.admin-bed{background:#34303f;border-radius:10px;padding:10px}
+.admin-bed-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.admin-bed button{width:auto;padding:8px 10px;font-size:12px;background:#8b1d68}

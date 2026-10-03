@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shital PG for Girls - Room Booking</title>
+<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+<header>
+  <img class="logo" src="public/images/logo_1.png" alt="Shital PG for Girls logo">
+  <div class="top-title">ROOM BOOKING & AVAILABILITY</div>
+</header>
+
+<div class="container">
+  <h2 class="section-title">✨ Amenities ✨</h2>
+  <div class="amenities">
+    <span class="amenity">📶 Wi-Fi</span>
+    <span class="amenity">🚗 Parking</span>
+    <span class="amenity">📚 Study Table</span>
+    <span class="amenity">🛏️ Single Bed</span>
+    <span class="amenity">🛌 Gadda / Mattress</span>
+    <span class="amenity">💧 RO Water</span>
+    <span class="amenity">🔐 Personal Locker</span>
+    <span class="amenity">🚰 24×7 Water Facility</span>
+  </div>
+
+  <div class="whatsapp">📲 Booking Requests: 9028083205 &nbsp; | &nbsp; 9158588592</div>\n\n  <div class="note">
+    <b>📲 Booking Request:</b> Tap <b>Request to Book</b>, select an <b>Available Bed Number</b>, and enter your name and mobile number.
+    Your request will be sent to WhatsApp <b>9028083205</b> and <b>9158588592</b>.
+  </div>
+
+  <div class="grid" id="rooms"></div>
+
+  
+<div class="booking-overlay" id="bookingOverlay">
+  <div class="booking-form">
+    <h2>📲 Bed Booking Request</h2>
+    <div class="booking-sub">Fill in your details and send the request directly on WhatsApp.</div>
+    <div class="summary" id="bookingSummary"></div>
+
+    <div class="field">
+      <label>Select Bed Number <span style="color:#16a34a">(Selected bed turns green ✓)</span></label>
+      <div class="bed-list" id="bedList"></div>
+    </div>
+
+    <div class="form-grid">
+      <div class="field full">
+        <label>Full Name</label>
+        <input id="bookingName" placeholder="Enter your full name">
+      </div>
+      <div class="field full">
+        <label>Mobile Number</label>
+        <input id="bookingMobile" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number">
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button class="cancel" onclick="closeBooking()">Cancel</button>
+      <button onclick="sendBookingRequest()">💬 Send WhatsApp Request</button>
+    </div>
+  </div>
+</div>
+
+  <div class="admin">
+    <h2>🔐 Admin Login</h2>
+    <input id="user" placeholder="Admin username">
+    <input id="pass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div id="adminPanel" class="hidden">
+      <h3>Room Status</h3>
+      <div id="adminRooms"></div>
+      <button onclick="logout()" style="background:#444;margin-top:10px">Logout</button>
+    </div>
+  </div>
+</div>
+
+<script src="public/js/app.js"></script>
+</body>
+</html>
